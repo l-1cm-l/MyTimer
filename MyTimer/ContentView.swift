@@ -9,13 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView{
+        VStack{Text("タイマー表示")}
+            .navigationBarItems(trailing:
+            NavigationLink(
+                destination: SettingView())
+                {Text("秒数設定")}
+            )
+        }
     }
 }
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
+
